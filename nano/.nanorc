@@ -1,5 +1,28 @@
 ## My Config File for Nano
 
-## Enable mouse support
+## enable mouse support
 set mouse
-## Don't wrap text
+## don't wrap text
+set nowrap
+## use smooth scrolling
+set smooth
+## nanorc files
+include "/usr/share/nano/nanorc.nanorc"
+## cascading style sheets
+include "/usr/share/nano/css.nanorc"
+## html
+include "/usr/share/nano/html.nanorc"
+## python
+include "/usr/share/nano/ruby.nanorc"
+## java
+include "/usr/share/nano/java.nanorc"
+## bourne shell scripts
+include "/usr/share/nano/sh.nanorc"
+## set line numbers
+set linenumbers
+## use auto-indentation
+set autoindent
+## (tabs and spaces) instead of always at the edge of the screen
+set atblanks
+## set tabsize
+set tabsize 4
