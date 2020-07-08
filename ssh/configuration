@@ -1,0 +1,36 @@
+SSH Configuration
+
+1. Installation:
+  - Type: sudo apt install openssh-server
+2. Enable ssh service:
+  - Type: sudo systemctl enable ssh
+3. Start ssh service:
+  - Type: sudo systemctl start ssh
+4. Login by typing: user@server-name or user@server-ip
+
+How To Log Into SSH with Keys
+
+Create SSH Keys
+
+1. From the computer you want to login:
+  - Type: ssh-keygen -t rsa
+  - Press enter to accept defaults
+2. Change into .ssh directory
+  - Type: cd ~/.ssh
+    Type: ls -l
+    You should see:
+      - authorized_keys
+      - id_rsa          --------> Keep this file secret
+      - id_rsa.pub      --------> This can be shared
+3. Transfer The Public Key to the Server
+  - Type: ssh-copy-id remote-host
+
+Disable Password Authentication
+  - sudo nano /etc/ssh/sshg_config
+    locate Password Authentication: set to "no"
+  - locate:
+    PubkeyAuthentication: set to "yes:
+    ChallengeResponseAthentication: set to "no"
+Miss. 
+  - ssh -p port_number remote_host    -----> specifies the port to connect
+  - ssh remote_host command_to_run    -----> run a single command on host
